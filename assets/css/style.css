@@ -1,0 +1,246 @@
+/*Font do site*/
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+ /*Reset basic*/
+*{    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Bai Jamjuree', sans-serif;    
+}
+:root {
+    --corTexto: rgb(75, 75, 75);
+    --corP: rgba(75, 75, 75, 0.397);
+    --corHoverRedeSocial: brightness(1.5) sepia(1) saturate(5)hue-rotate(150deg);
+    --corBUm: hsl(171, 66%, 44%);
+    --corBDois: hsl(233, 100%, 69%);
+    --corHoverbUm: hsla(171, 66%, 44%, 0.719);
+    --corHoverBDois: hsla(233, 60%, 57%, 0.781);
+}
+body{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.topPrincipal {
+    background-image: url(/images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 80vh;
+}
+.top {
+   
+    background-size: cover;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textDescription {
+    color: var(--corTexto);
+    margin: 20px;
+    line-height: 1.8;
+}
+.tituloPrincipal h1{
+    line-height: 1.2;
+    color: var(--corTexto);
+    margin: 0 20px 30px;
+}
+
+/*Conteudo principal*/
+
+.images{    
+    margin: 20px;
+}
+.images img {
+    max-width: 100%;    
+}
+.textDescription h2 {
+    font-size: 1.8em;
+}
+.textDescription h3 {
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+.textDescription p {
+    font-size: 1em;
+    color: var(--corP);
+    font-weight: bold;
+}
+.devices{
+    margin-top: 150px;
+}
+/*Botoes*/
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 40px;    
+}
+.button a{
+    display: block;
+    padding: 18px;
+    border-radius: 30px;   
+    width: 100%;
+    margin: 10px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: inset 0 -4px rgba(110, 110, 110, 0.538);
+}
+.bUm {
+    background-color: var(--corBUm);    
+}
+.bDois {
+    background-color: var(--corBDois);
+}
+.bUm:hover {
+    background-color: var(--corHoverbUm);
+}
+.bDois:hover {
+    background-color: var(--corHoverBDois);
+}
+.conteudoPrincipal {
+    text-align: center;
+}
+.logosSponsorship .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services .textDescription {
+    margin-top: 80px;
+}
+.services .textDescription:first-child::before {
+    content: url(/images/icon-blacklist.svg);    
+}
+.services .textDescription:nth-child(2)::before {
+    content: url(/images/icon-text.svg);    
+}
+.services .textDescription:last-child::before {
+    content: url(/images/icon-preview.svg);    
+}
+.logosSponsorship {
+    margin: 100px;
+}
+.logosSponsorship .logo img{
+    padding: 30px;
+}
+
+/*Rodape*/
+
+.rodape {
+    height: 60vh;    
+    margin-top: 150px;
+    background-color: rgba(170, 170, 170, 0.24);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.rodape .logo img {
+    max-width: 70px;
+    margin-top: 50px;
+}
+.rodape .faq .faqs{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.rodape .faq a {
+    margin: 15px;
+    font-size: 1.2em;
+    color: var(--corTexto);
+}
+.rodape .social {
+    margin-top: 30px;
+    margin-bottom: 30px;   
+}
+.rodape .social a{
+    margin: 20px;  
+}
+.rodape .social a img:hover {
+    filter: var(--corHoverRedeSocial);
+}
+.rodape .faq a:hover{
+    color: hsl(171, 66%, 44%);
+}
+
+@media(min-width: 768px) {
+   
+    .topPrincipal {
+        background-image: url(/images/bg-header-desktop.png);
+        background-size: cover;
+        height: 60vh;
+    }
+    .button {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .button a{        
+        width: 30%;         
+    }   
+    .imgUm {          
+        overflow: hidden;      
+        margin: 0;
+    }
+    .imgUm img {
+        width: 100%;
+        margin-right: 30px;       
+    }
+    .descImg {
+        display: flex;
+        justify-content: start;
+        align-items: center;        
+    }
+    .texts {
+        max-width: 400px;
+        text-align: start;
+    }
+    .services {
+        display: flex;        
+        justify-content: space-around;
+        align-items: center;
+    }
+    .services .textDescription {
+        max-width: 350px;
+    }
+    .logosSponsorship .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;       
+    }
+    .logosSponsorship {
+        margin: 80px 0;
+    }
+    .logosSponsorship .logo img{
+        width: 15%;
+        padding: 0;
+    }
+    .rodape {
+        flex-direction: row;
+        height: 18vh;
+    }
+    .rodape .faq {
+        display: flex;        
+    }
+    .rodape .faq .faqs {
+        display: flex;        
+        text-align: start;
+    }  
+    .rodape .social {
+        margin: 0;        
+    }
+    .rodape .logo img{
+        margin: 0;
+    }
+}
+@media(min-width: 1024px) {
+    .tituloPrincipal h1 {
+        font-size: 3em;
+    }
+} 
